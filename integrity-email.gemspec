@@ -15,5 +15,5 @@ Gem::Specification.new do |s|
                         )
 
   s.add_dependency 'integrity'
-  s.add_dependency 'sinatra-diddies', ['>= 0.0.2']
+  s.add_dependency 'foca-sinatra-diddies', ['>= 0.0.2']
 end
