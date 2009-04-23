@@ -19,7 +19,7 @@ module Integrity
       end
 
       def deliver!
-        email.deliver!
+        email.deliver! unless @commit.successful? && @config['only_failure'].include?("1")
       end
 
       def email

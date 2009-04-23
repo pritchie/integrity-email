@@ -29,3 +29,10 @@
 %p.normal
   %label{ :for => "email_notifier_domain" } Domain
   %input.text#email_notifier_domain{ :name => "notifiers[Email][domain]", :value => config["domain"], :type => "text" }
+
+%h3 Delivery Settings
+
+%p.normal
+  %label{ :for => "email_notifier_only_on_failire" } Failure Only?
+  %input.hidden{ :name => "notifiers[Email][only_failure]", :value => "0", :type => "hidden" }
+  %input.checkbox#email_notifier_only_on_failure{ checkbox("notifiers[Email][only_failure]", config["only_failure"].include?("1") ) }
